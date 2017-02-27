@@ -47,7 +47,7 @@ end
 % % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %
 % %
-% FIGURE 3A, 3B, 3C
+% %FIGURE 3A, 3B, 3C
 m=[1e-4,1e-5,1e-6];
 tmax=[200,400,200];
 for i = 1:3 
@@ -64,13 +64,13 @@ for i = 1:3
 end
 %
 %
-%FIGURE 3D
-for j = 1:3 
-    output=KB_fig3(0.9625,0.83667,0.3,0,0.8,1,0.03,1e-5,500);
+% %FIGURE 3D
+for j = 1:3
+    output=KB_fig3(0.83,0.96,0.3,0,0.8,1,0.03,1e-5,500);
     figure(3)
     subplot(2,2,4)
     plot(output(2,400:501),output(1,400:501))
-    xlim([0 1]), ylim([0 1])
+%     xlim([0 1.1]), ylim([0 1])
     xlabel('Pathogen Virulence')
     ylabel('Host Susceptibility')
     hold on
