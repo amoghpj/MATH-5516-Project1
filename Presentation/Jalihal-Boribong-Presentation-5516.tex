@@ -1,8 +1,8 @@
 % Created 2017-02-28 Tue 13:54
 \documentclass[presentation]{beamer}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{fixltx2e}
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+% \usepackage{fixltx2e}
 \usepackage{graphicx}
 \usepackage{longtable}
 \usepackage{float}
@@ -18,7 +18,8 @@
 \tolerance=1000
 \usetheme{CambridgeUS}
 \usecolortheme{seagull}
-\usetheme{default}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
 \author{Amogh Jalihal, Brittany Boribong}
 \date{\today}
 \title{Gene-for-Gene Models: Controversies and Results}
@@ -27,11 +28,6 @@
   pdfsubject={},
   pdfcreator={Emacs 24.5.1 (Org mode 8.2.10)}}
 \begin{document}
-
-\maketitle
-\begin{frame}{Outline}
-\tableofcontents
-\end{frame}
 
 \begin{frame}[label=sec-1]{History of \emph{gene-for-gene} systems}
 \end{frame}
@@ -49,8 +45,11 @@
 \begin{frame}[label=sec-7]{The Problem with Leonard: Kirby and Burdon, 1997}
 \end{frame}
 \begin{frame}[label=sec-8]{Our Problems with Kirby and Burdon, 1997}
-\bibliographystyle{unsrt}
-\bibliography{references}
+
 \end{frame}
+\begin{References}
+  \bibliographystyle{unsrt}
+\bibliography{references}
+\end{References}
 % Emacs 24.5.1 (Org mode 8.2.10)
 \end{document}
