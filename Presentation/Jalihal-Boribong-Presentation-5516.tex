@@ -15,24 +15,40 @@
 \usepackage{wasysym}
 \usepackage{amssymb}
 \usepackage{hyperref}
+
 \tolerance=1000
 \usetheme{CambridgeUS}
 \usecolortheme{seagull}
-
 \setbeamertemplate{navigation symbols}{}%remove navigation symbols
-\author{Amogh Jalihal, Brittany Boribong}
+\setbeamertemplate{itemize items}{\color{red}$\CIRCLE$}%[circle]
+
+\author[Boribong, Jalihal]{Amogh Jalihal, Brittany Boribong}
 \date{\today}
 \title{Gene-for-Gene Models: Controversies and Results}
 \hypersetup{
   pdfkeywords={},
   pdfsubject={},
   pdfcreator={Emacs 24.5.1 (Org mode 8.2.10)}}
+
+
+
 \begin{document}
-
+\maketitle
 \begin{frame}[label=sec-1]{History of \emph{gene-for-gene} systems}
+  \begin{itemize}
+  \item Significance: Plant-pathogen interactions
+  \item Agriculture post-``Dirty Thirties''
+  \item Flor proposed a gene-for-gene hypothesis \footnote{\tiny{Flor, 1942 \cite{flor1942complementary}}}
+  \end{itemize}
+    \begin{quotation}
+      ...for each gene determining resistance in flax (\emph{Linum usitatissimum}) there was a specific and related gene determining pathogenicity in the rust fungus (\emph{Melampsora lini}). 
+    \end{quotation}
+    \begin{itemize}
+    \item Biological basis of the gene-for-gene hypothesis \footnote{\tiny{van der Plank, 1968 \cite{vanderplank1968disease}}}
+    \end{itemize}
 \end{frame}
-
 \begin{frame}[label=sec-2]{Enter Population Genetics}
+
 \end{frame}
 \begin{frame}[label=sec-3]{Controversy regarding stability: Sedcole, 1978}
 \end{frame}
@@ -47,9 +63,9 @@
 \begin{frame}[label=sec-8]{Our Problems with Kirby and Burdon, 1997}
 
 \end{frame}
-\begin{References}
+\begin{frame}{References}
   \bibliographystyle{unsrt}
 \bibliography{references}
-\end{References}
+\end{frame}
 % Emacs 24.5.1 (Org mode 8.2.10)
 \end{document}
