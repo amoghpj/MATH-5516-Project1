@@ -33,6 +33,61 @@
 \end{frame}
 
 \begin{frame}[label=sec-2]{Enter Population Genetics}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Term} & \textbf{Definition} \\
+\hline
+$p$ & Frequency of resistant allele in hosts \\
+$q$ & Frequency of susceptible allele in hosts \\
+$m$ & Frequency of virulent allele in pathogens\\
+$n$ & Frequency of avirulent allele in pathogens\\
+$k$ & Cost of expressing virulences\\
+$t$ & Loss of fitness of avirulent pathogen on resistant host\\
+$a$ & Fitness gain of expressing virulence in pathogen\\
+$c$ & Cost of resistance\\
+$\mu$ & Mutation rate\\
+\hline
+\end{tabular}
+\caption{List of variables and parameters used}
+\label{tab:parlist}
+\end{table}
+\end{frame}
+\begin{frame}{Enter Population Genetics}
+Relative fitnesses of pathogen alleles on the varying host phenotypes
+\begin{center}
+\begin{tabular}{c|c|c}
+& \textbf{$r$} & \textbf{$R$}\\
+\hline
+$v$ & 1 & $1-t$\\
+$V$ & $1-k$ & $1-k+a$\\
+\end{tabular}
+\end{center}
+Pathogen alleles: $v$ = avirulent, $V$ = virulent \\
+Host alleles: $r$ = susceptible, $R$ = resistant \\
+\pause
+Fitness ($W$) of the two pathogenic alleles in the next generation
+\begin{align}
+W_V&=q^2(1-k)+(1-q^2)(1-k+a) \label{eq:fitV} \\
+W_v&=q^2 + (1-q^2)(1-t) \label{eq:fitv}
+\end{align}
+$q$, $p=1-q$ represent the population frequencies of the susceptible and resistant host alleles, respectively
+\end{frame}
+\begin{frame}{Enter Population Genetics}
+The frequency of the virulent allele in the next generation can be expressed in terms of the fraction of hosts infected by each pathogenic variant
+\begin{align*}
+n_{i+1}=\frac{n_iW_V}{n_iW_V+m_iW_v}
+\end{align*}
+where $n$ is the frequency of $V$, and $m$ is the frequency of $v$.
+\end{frame}
+\begin{frame}[label=PathogenDerivation]{Enter Population Genetics}
+\begin{align}
+n_{i+1} &= \frac{n_i[1-k+(1-q_i^2)a]}{1-(1-q_i^2)t+n_i[(1-q_i^2)(a+t)-k]} \label{eq:Leonard94-1} \\
+p_{i+1} &= \frac{p_i[1-c-s(1-t)+n_{i+1}s(k-a-t)]}{1-s+n_{i+1}ks+(1-q_i^2)[ts-c-n_{i+1}s(a+t)]} \label{eq:Leonard94-2}
+\end{align}
+\vfill{}
+\hyperlink{HostDerivation}{\beamerbutton{Derivation of Host Population Model}}
 \end{frame}
 \begin{frame}[label=sec-3]{Controversy regarding stability: Sedcole, 1978}
 \end{frame}
@@ -45,11 +100,14 @@
 \begin{frame}[label=sec-7]{The Problem with Leonard: Kirby and Burdon, 1997}
 \end{frame}
 \begin{frame}[label=sec-8]{Our Problems with Kirby and Burdon, 1997}
-
 \end{frame}
-\begin{References}
-  \bibliographystyle{unsrt}
+\begin{frame}{References}
+\bibliographystyle{unsrt}
 \bibliography{references}
-\end{References}
+\end{frame}
+\appendix
+\begin{frame}[label=HostDerivation]{Derivation of Host Population Model}
+\hyperlink{PathogenDerivation}{\beamerbutton{Main}}
+\end{frame}
 % Emacs 24.5.1 (Org mode 8.2.10)
 \end{document}
